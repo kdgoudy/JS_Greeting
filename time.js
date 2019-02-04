@@ -1,16 +1,17 @@
 //Find the current hour
-var hourNow = today.getHours();
+var d = new Date();
+var time = d.getHours();
 var greeting;
 
 //Display the appropriate greeting base on the current time
-if (hourNow > 18){
-  greeting = "Good Evening!";
-} else if (hourNow > 11){
-  greeting = "Good Afternoon!";
-} else if (hourNow > 0){
-  greeting = "Good Morning!";
-} else {
-  greeting = "Welcome";
+if (time < 12) {
+  document.write("<h3>Good Morning!</h3>");
+}
+if (time > 12) {
+  document.write("<h3>Good afternoon!</h3>");
+}
+if (time == 12) {
+  document.write("<h3>Good Evening!</h3>");
 }
 
 document.write(`<h3>` + greeting + `</h3>`);
