@@ -1,7 +1,7 @@
 //Find the current hour
 var d = new Date();
 var time = d.getHours();
-var greeting;
+
 
 //Display the appropriate greeting base on the current time
 if (time < 12) {
